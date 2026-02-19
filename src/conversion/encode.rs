@@ -1,9 +1,9 @@
+use image::DynamicImage;
 use image::codecs::bmp::BmpEncoder;
 use image::codecs::gif::GifEncoder;
 use image::codecs::jpeg::JpegEncoder;
 use image::codecs::png::PngEncoder;
 use image::codecs::tiff::TiffEncoder;
-use image::DynamicImage;
 use std::io::Cursor;
 
 use super::formats::OutputFormat;

@@ -48,8 +48,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
         let file_type = file.type_();
 
         // Validate it's an image
-        if !file_type.starts_with("image/") && !name.ends_with(".bmp") && !name.ends_with(".tiff")
-        {
+        if !file_type.starts_with("image/") && !name.ends_with(".bmp") && !name.ends_with(".tiff") {
             set_error_message.set(Some("Please select a valid image file".to_string()));
             return;
         }
@@ -169,10 +168,10 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                 style="display: none"
                 on:change=move |ev| {
                     let input: HtmlInputElement = ev.target().unwrap().dyn_into().unwrap();
-                    if let Some(files) = input.files() {
-                        if let Some(file) = files.get(0) {
-                            handle_file(file);
-                        }
+                    if let Some(files) = input.files()
+                        && let Some(file) = files.get(0)
+                    {
+                        handle_file(file);
                     }
                     input.set_value("");
                 }
@@ -198,17 +197,16 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                 on:drop=move |ev: web_sys::DragEvent| {
                     ev.prevent_default();
                     set_is_dragging.set(false);
-                    if let Some(dt) = ev.data_transfer() {
-                        if let Some(files) = dt.files() {
-                            if let Some(file) = files.get(0) {
-                                handle_file(file);
-                            }
-                        }
+                    if let Some(dt) = ev.data_transfer()
+                        && let Some(files) = dt.files()
+                        && let Some(file) = files.get(0)
+                    {
+                        handle_file(file);
                     }
                 }
                 on:click=move |_| {
                     if let Some(input) = file_input_ref.get() {
-                        let _ = input.click();
+                        input.click();
                     }
                 }
             >

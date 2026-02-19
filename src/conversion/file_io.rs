@@ -1,8 +1,8 @@
-use wasm_bindgen::prelude::*;
+use js_sys::{Array, ArrayBuffer, Uint8Array};
 use wasm_bindgen::JsCast;
+use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::JsFuture;
 use web_sys::{Blob, BlobPropertyBag, FileReader, Url};
-use js_sys::{Array, ArrayBuffer, Uint8Array};
 
 /// Read a web_sys::File into a Vec<u8> using FileReader
 pub async fn read_file_bytes(file: &web_sys::File) -> Result<Vec<u8>, String> {
@@ -52,11 +52,8 @@ pub fn trigger_download(bytes: &[u8], filename: &str, mime_type: &str) -> Result
 
     let window = web_sys::window().unwrap();
     let document = window.document().unwrap();
-    let anchor: web_sys::HtmlAnchorElement = document
-        .create_element("a")
-        .unwrap()
-        .dyn_into()
-        .unwrap();
+    let anchor: web_sys::HtmlAnchorElement =
+        document.create_element("a").unwrap().dyn_into().unwrap();
     anchor.set_href(&url);
     anchor.set_download(filename);
     anchor.click();
