@@ -302,10 +302,11 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                     "mt-8 opacity-40 pointer-events-none".to_string()
                 }
             }>
-                <label class="block text-lg font-semibold text-zinc-100 mb-3">
+                <label class="block text-lg font-semibold text-zinc-100 mb-3" for="quality-slider">
                     "Quality: " {move || quality.get()} "%"
                 </label>
                 <input
+                    id="quality-slider"
                     type="range"
                     min="1"
                     max="100"
