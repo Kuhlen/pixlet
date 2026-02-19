@@ -180,7 +180,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
             // Upload Area
             <div
                 class=move || {
-                    let base = "border-2 border-dashed rounded-2xl p-12 text-center transition-all cursor-pointer";
+                    let base = "border-2 border-dashed rounded-2xl p-6 md:p-12 text-center transition-all cursor-pointer";
                     if is_dragging.get() {
                         format!("{base} border-amber-500 bg-zinc-800/50")
                     } else {
@@ -216,7 +216,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                         view! {
                             <div class="float-animation">
                                 <svg
-                                    class="w-20 h-20 mx-auto text-amber-500 mb-4"
+                                    class="w-14 h-14 md:w-20 md:h-20 mx-auto text-amber-500 mb-4"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -229,7 +229,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                                     ></path>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-semibold text-zinc-100 mb-2">
+                            <h3 class="text-xl md:text-2xl font-semibold text-zinc-100 mb-2">
                                 "Drop your images here"
                             </h3>
                             <p class="text-zinc-400 mb-4">"or click to browse"</p>
@@ -322,7 +322,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
             // Convert Button
             <div class="mt-8 text-center">
                 <button
-                    class="bg-amber-500 text-zinc-950 px-12 py-4 rounded-full text-lg font-bold hover:bg-amber-400 transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    class="bg-amber-500 text-zinc-950 px-8 md:px-12 py-3 md:py-4 rounded-full text-base md:text-lg font-bold hover:bg-amber-400 transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled=move || is_converting.get() || file_bytes.get().is_none()
                     on:click=on_convert
                 >

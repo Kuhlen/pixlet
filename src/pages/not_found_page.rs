@@ -27,9 +27,9 @@ pub fn NotFound() -> impl IntoView {
                             ></path>
                         </svg>
                     </div>
-                    <h2 class="text-7xl font-bold text-amber-500 mb-4">"404"</h2>
-                    <h3 class="text-3xl font-bold text-zinc-100 mb-4">"Page Not Found"</h3>
-                    <p class="text-xl text-zinc-400 max-w-md mx-auto mb-8">
+                    <h2 class="text-5xl md:text-7xl font-bold text-amber-500 mb-4">"404"</h2>
+                    <h3 class="text-2xl md:text-3xl font-bold text-zinc-100 mb-4">"Page Not Found"</h3>
+                    <p class="text-lg md:text-xl text-zinc-400 max-w-md mx-auto mb-8 px-2">
                         "Oops! The page you're looking for doesn't exist or has been moved."
                     </p>
                     <a
