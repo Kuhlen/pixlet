@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+.dark-bg {
+    background: #09090b;
+}
+
+.card-surface {
+    background: #18181b;
+    border: 1px solid #27272a;
+}
