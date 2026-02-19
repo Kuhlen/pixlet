@@ -8,6 +8,8 @@ mod conversion;
 mod pages;
 
 // Top-Level pages
+use crate::pages::about_page::About;
+use crate::pages::features_page::Features;
 use crate::pages::home_page::Home;
 use crate::pages::not_found_page::NotFound;
 
@@ -21,7 +23,7 @@ pub fn App() -> impl IntoView {
         <Html attr:lang="en" attr:dir="ltr" attr:data-theme="light" />
 
         // sets the document title
-        <Title text="Image Converter - Convert Your Images Instantly" />
+        <Title text="Pixlet - Convert Your Images Instantly" />
 
         // injects metadata in the <head> of the page
         <Meta charset="UTF-8" />
@@ -30,6 +32,8 @@ pub fn App() -> impl IntoView {
         <Router>
             <Routes fallback=|| view! { <NotFound /> }>
                 <Route path=path!("/") view=Home />
+                <Route path=path!("/features") view=Features />
+                <Route path=path!("/about") view=About />
             </Routes>
         </Router>
     }

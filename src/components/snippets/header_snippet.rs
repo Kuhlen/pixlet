@@ -6,7 +6,7 @@ pub fn HeaderSnippet() -> impl IntoView {
     view! {
         <header class="py-6 px-4">
             <div class="max-w-6xl mx-auto flex items-center justify-between">
-                <div class="flex items-center space-x-3">
+                <a href="/" class="flex items-center space-x-3 hover:opacity-90 transition">
                     <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
                         <svg
                             class="w-6 h-6 text-zinc-950"
@@ -23,12 +23,12 @@ pub fn HeaderSnippet() -> impl IntoView {
                         </svg>
                     </div>
                     <h1 class="text-2xl font-bold text-zinc-100">"PIXLET"</h1>
-                </div>
+                </a>
                 <nav class="hidden md:flex space-x-6">
-                    <a href="#" class="text-zinc-400 hover:text-amber-500 transition">
+                    <a href="/features" class="text-zinc-400 hover:text-amber-500 transition">
                         "Features"
                     </a>
-                    <a href="#" class="text-zinc-400 hover:text-amber-500 transition">
+                    <a href="/about" class="text-zinc-400 hover:text-amber-500 transition">
                         "About"
                     </a>
                 </nav>
