@@ -2,7 +2,7 @@ use leptos::prelude::*;
 
 /// Features section with 3 feature cards
 #[component]
-pub fn FeaturesSnippet() -> impl IntoView {
+pub fn FeaturesComponent() -> impl IntoView {
     view! {
         <div class="grid md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
             // Lightning Fast

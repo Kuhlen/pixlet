@@ -1,10 +1,10 @@
 use leptos::prelude::*;
 
-use crate::components::snippets::converter_card_snippet::ConverterCardSnippet;
-use crate::components::snippets::features_snippet::FeaturesSnippet;
-use crate::components::snippets::footer_snippet::FooterSnippet;
-use crate::components::snippets::header_snippet::HeaderSnippet;
-use crate::components::snippets::hero_snippet::HeroSnippet;
+use crate::components::converter_card::ConverterCardComponent;
+use crate::components::features::FeaturesComponent;
+use crate::components::hero::HeroComponent;
+use crate::components::snippets::footer::FooterSnippet;
+use crate::components::snippets::header::HeaderSnippet;
 
 /// Home Page - Image Converter landing page
 #[component]
@@ -14,9 +14,9 @@ pub fn Home() -> impl IntoView {
             <HeaderSnippet />
 
             <main class="max-w-6xl mx-auto px-4 py-12">
-                <HeroSnippet />
-                <ConverterCardSnippet />
-                <FeaturesSnippet />
+                <HeroComponent />
+                <ConverterCardComponent />
+                <FeaturesComponent />
             </main>
 
             <FooterSnippet />

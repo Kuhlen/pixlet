@@ -1,7 +1,7 @@
 use leptos::prelude::*;
 
-use crate::components::snippets::footer_snippet::FooterSnippet;
-use crate::components::snippets::header_snippet::HeaderSnippet;
+use crate::components::snippets::footer::FooterSnippet;
+use crate::components::snippets::header::HeaderSnippet;
 
 /// Features Page
 #[component]
@@ -25,8 +25,18 @@ pub fn Features() -> impl IntoView {
                     // Lightning Fast
                     <div class="card-surface rounded-2xl p-8 text-center hover:border-amber-500/50 transition">
                         <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-5">
-                            <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            <svg
+                                class="w-8 h-8 text-amber-500"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                                ></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-zinc-100 mb-3">"Lightning Fast"</h3>
@@ -38,8 +48,18 @@ pub fn Features() -> impl IntoView {
                     // 100% Private
                     <div class="card-surface rounded-2xl p-8 text-center hover:border-amber-500/50 transition">
                         <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-5">
-                            <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            <svg
+                                class="w-8 h-8 text-amber-500"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                ></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-zinc-100 mb-3">"100% Private"</h3>
@@ -51,8 +71,18 @@ pub fn Features() -> impl IntoView {
                     // Completely Free
                     <div class="card-surface rounded-2xl p-8 text-center hover:border-amber-500/50 transition">
                         <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-5">
-                            <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <svg
+                                class="w-8 h-8 text-amber-500"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                ></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-zinc-100 mb-3">"Completely Free"</h3>
@@ -64,8 +94,18 @@ pub fn Features() -> impl IntoView {
                     // Multiple Formats
                     <div class="card-surface rounded-2xl p-8 text-center hover:border-amber-500/50 transition">
                         <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-5">
-                            <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            <svg
+                                class="w-8 h-8 text-amber-500"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                ></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-zinc-100 mb-3">"Multiple Formats"</h3>
@@ -77,8 +117,18 @@ pub fn Features() -> impl IntoView {
                     // No Upload Required
                     <div class="card-surface rounded-2xl p-8 text-center hover:border-amber-500/50 transition">
                         <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-5">
-                            <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                            <svg
+                                class="w-8 h-8 text-amber-500"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
+                                ></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-zinc-100 mb-3">"No Upload Required"</h3>
@@ -90,11 +140,23 @@ pub fn Features() -> impl IntoView {
                     // Zero Dependencies
                     <div class="card-surface rounded-2xl p-8 text-center hover:border-amber-500/50 transition">
                         <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-5">
-                            <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            <svg
+                                class="w-8 h-8 text-amber-500"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                                ></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-zinc-100 mb-3">"Zero Server Dependencies"</h3>
+                        <h3 class="text-xl font-bold text-zinc-100 mb-3">
+                            "Zero Server Dependencies"
+                        </h3>
                         <p class="text-zinc-400 leading-relaxed">
                             "No backend, no API keys, no database. Just a static site with a WASM binary doing all the heavy lifting. Works offline too."
                         </p>
@@ -106,19 +168,35 @@ pub fn Features() -> impl IntoView {
                     <h2 class="text-3xl font-bold text-zinc-100 mb-12">"How It Works"</h2>
                     <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                         <div>
-                            <div class="w-12 h-12 bg-amber-500 text-zinc-950 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">"1"</div>
-                            <h4 class="text-lg font-semibold text-zinc-100 mb-2">"Drop Your Image"</h4>
-                            <p class="text-zinc-400">"Drag and drop or click to select the image you want to convert."</p>
+                            <div class="w-12 h-12 bg-amber-500 text-zinc-950 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                                "1"
+                            </div>
+                            <h4 class="text-lg font-semibold text-zinc-100 mb-2">
+                                "Drop Your Image"
+                            </h4>
+                            <p class="text-zinc-400">
+                                "Drag and drop or click to select the image you want to convert."
+                            </p>
                         </div>
                         <div>
-                            <div class="w-12 h-12 bg-amber-500 text-zinc-950 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">"2"</div>
-                            <h4 class="text-lg font-semibold text-zinc-100 mb-2">"Pick a Format"</h4>
-                            <p class="text-zinc-400">"Choose your desired output format and adjust quality settings if needed."</p>
+                            <div class="w-12 h-12 bg-amber-500 text-zinc-950 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                                "2"
+                            </div>
+                            <h4 class="text-lg font-semibold text-zinc-100 mb-2">
+                                "Pick a Format"
+                            </h4>
+                            <p class="text-zinc-400">
+                                "Choose your desired output format and adjust quality settings if needed."
+                            </p>
                         </div>
                         <div>
-                            <div class="w-12 h-12 bg-amber-500 text-zinc-950 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">"3"</div>
+                            <div class="w-12 h-12 bg-amber-500 text-zinc-950 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                                "3"
+                            </div>
                             <h4 class="text-lg font-semibold text-zinc-100 mb-2">"Download"</h4>
-                            <p class="text-zinc-400">"Hit convert and your file downloads instantly. That's it. No account needed."</p>
+                            <p class="text-zinc-400">
+                                "Hit convert and your file downloads instantly. That's it. No account needed."
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -130,8 +208,18 @@ pub fn Features() -> impl IntoView {
                         class="inline-flex items-center px-8 py-4 bg-amber-500 text-zinc-950 font-bold text-lg rounded-full hover:bg-amber-400 transition transform hover:scale-105"
                     >
                         "Start Converting"
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        <svg
+                            class="w-5 h-5 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6"
+                            ></path>
                         </svg>
                     </a>
                 </div>

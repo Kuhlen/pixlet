@@ -1,7 +1,7 @@
 use leptos::prelude::*;
 
-use crate::components::snippets::footer_snippet::FooterSnippet;
-use crate::components::snippets::header_snippet::HeaderSnippet;
+use crate::components::snippets::footer::FooterSnippet;
+use crate::components::snippets::header::HeaderSnippet;
 
 /// About Page
 #[component]
@@ -39,7 +39,9 @@ pub fn About() -> impl IntoView {
             <main class="max-w-4xl mx-auto px-4 py-12">
                 // Hero
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-bold text-zinc-100 mb-4">"About Pixlet"</h2>
+                    <h2 class="text-3xl md:text-5xl font-bold text-zinc-100 mb-4">
+                        "About Pixlet"
+                    </h2>
                     <p class="text-lg md:text-xl text-zinc-400">
                         "The image converter that probably didn't need to exist, but here we are."
                     </p>
@@ -107,19 +109,27 @@ pub fn About() -> impl IntoView {
                         </div>
                         <div class="text-center p-4">
                             <div class="text-4xl font-bold text-amber-500 mb-2">"6"</div>
-                            <p class="text-zinc-400">"Image formats supported (and counting... maybe)"</p>
+                            <p class="text-zinc-400">
+                                "Image formats supported (and counting... maybe)"
+                            </p>
                         </div>
                         <div class="text-center p-4">
                             <div class="text-4xl font-bold text-amber-500 mb-2">"∞"</div>
-                            <p class="text-zinc-400">"Conversions you can do (we literally can't stop you)"</p>
+                            <p class="text-zinc-400">
+                                "Conversions you can do (we literally can't stop you)"
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 // Easter Egg: Electron mass clicker
                 <div class="card-surface rounded-2xl p-8 mb-8">
-                    <h3 class="text-2xl font-bold text-zinc-100 mb-2">"The Electron Mass Clicker"</h3>
-                    <p class="text-zinc-500 mb-6">"Ever wondered how many mass of an electron you can accumulate by clicking a button? No? Well, now you can find out."</p>
+                    <h3 class="text-2xl font-bold text-zinc-100 mb-2">
+                        "The Electron Mass Clicker"
+                    </h3>
+                    <p class="text-zinc-500 mb-6">
+                        "Ever wondered how many mass of an electron you can accumulate by clicking a button? No? Well, now you can find out."
+                    </p>
 
                     <div class="text-center">
                         <button
@@ -132,7 +142,9 @@ pub fn About() -> impl IntoView {
                         <div class="mt-6 space-y-2">
                             <p class="text-zinc-400">
                                 "Clicks: "
-                                <span class="text-amber-500 font-bold font-mono">{move || click_count.get()}</span>
+                                <span class="text-amber-500 font-bold font-mono">
+                                    {move || click_count.get()}
+                                </span>
                             </p>
                             <p class="text-zinc-400">
                                 "Total mass: "

@@ -1,7 +1,7 @@
 use leptos::prelude::*;
 
-use crate::components::snippets::footer_snippet::FooterSnippet;
-use crate::components::snippets::header_snippet::HeaderSnippet;
+use crate::components::snippets::footer::FooterSnippet;
+use crate::components::snippets::header::HeaderSnippet;
 
 /// 404 Not Found Page
 #[component]
@@ -28,7 +28,9 @@ pub fn NotFound() -> impl IntoView {
                         </svg>
                     </div>
                     <h2 class="text-5xl md:text-7xl font-bold text-amber-500 mb-4">"404"</h2>
-                    <h3 class="text-2xl md:text-3xl font-bold text-zinc-100 mb-4">"Page Not Found"</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold text-zinc-100 mb-4">
+                        "Page Not Found"
+                    </h3>
                     <p class="text-lg md:text-xl text-zinc-400 max-w-md mx-auto mb-8 px-2">
                         "Oops! The page you're looking for doesn't exist or has been moved."
                     </p>

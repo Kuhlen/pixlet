@@ -7,7 +7,7 @@ use crate::conversion::{decode, encode, file_io, formats::OutputFormat};
 
 /// Main converter card with drop zone, format selector, quality slider, and convert button
 #[component]
-pub fn ConverterCardSnippet() -> impl IntoView {
+pub fn ConverterCardComponent() -> impl IntoView {
     let (selected_format, set_selected_format) = signal("png".to_string());
     let (quality, set_quality) = signal(90i32);
     let (is_converting, set_is_converting) = signal(false);
@@ -99,7 +99,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
         set_progress.set(0);
 
         spawn_local(async move {
-            // Step 1: Decode
+            // Decode
             set_progress.set(30);
             set_conversion_stage.set("decoding".to_string());
             gloo_timers::future::TimeoutFuture::new(0).await;
@@ -114,7 +114,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                 }
             };
 
-            // Step 2: Encode
+            // Encode
             set_progress.set(60);
             set_conversion_stage.set("encoding".to_string());
             gloo_timers::future::TimeoutFuture::new(0).await;
@@ -168,9 +168,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                 style="display: none"
                 on:change=move |ev| {
                     let input: HtmlInputElement = ev.target().unwrap().dyn_into().unwrap();
-                    if let Some(files) = input.files()
-                        && let Some(file) = files.get(0)
-                    {
+                    if let Some(files) = input.files() && let Some(file) = files.get(0) {
                         handle_file(file);
                     }
                     input.set_value("");
@@ -184,7 +182,9 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                     if is_dragging.get() {
                         format!("{base} border-amber-500 bg-zinc-800/50")
                     } else {
-                        format!("{base} border-zinc-700 hover:border-amber-500 hover:bg-zinc-800/50")
+                        format!(
+                            "{base} border-zinc-700 hover:border-amber-500 hover:bg-zinc-800/50",
+                        )
                     }
                 }
                 on:dragover=move |ev: web_sys::DragEvent| {
@@ -197,8 +197,7 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                 on:drop=move |ev: web_sys::DragEvent| {
                     ev.prevent_default();
                     set_is_dragging.set(false);
-                    if let Some(dt) = ev.data_transfer()
-                        && let Some(files) = dt.files()
+                    if let Some(dt) = ev.data_transfer() && let Some(files) = dt.files()
                         && let Some(file) = files.get(0)
                     {
                         handle_file(file);
@@ -303,7 +302,9 @@ pub fn ConverterCardSnippet() -> impl IntoView {
                 }
             }>
                 <label class="block text-lg font-semibold text-zinc-100 mb-3" for="quality-slider">
-                    "Quality: " {move || quality.get()} "%"
+                    "Quality: "
+                    {move || quality.get()}
+                    "%"
                 </label>
                 <input
                     id="quality-slider"
