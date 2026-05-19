@@ -1,10 +1,10 @@
 use leptos::prelude::*;
 
-use crate::components::converter_card::ConverterCardComponent;
-use crate::components::features::FeaturesComponent;
-use crate::components::hero::HeroComponent;
 use crate::components::snippets::footer::FooterSnippet;
 use crate::components::snippets::header::HeaderSnippet;
+use crate::pages::home::converter_card::ConverterCardComponent;
+use crate::pages::home::features::FeaturesComponent;
+use crate::pages::home::hero::HeroComponent;
 
 /// Home Page - Image Converter landing page
 #[component]

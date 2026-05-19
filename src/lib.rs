@@ -4,14 +4,14 @@ use leptos_router::{components::*, path};
 
 // Modules
 mod components;
-mod conversion;
 mod pages;
+mod utils;
 
 // Top-Level pages
-use crate::pages::about_page::About;
-use crate::pages::features_page::Features;
-use crate::pages::home_page::Home;
-use crate::pages::not_found_page::NotFound;
+use crate::pages::about::About;
+use crate::pages::features::Features;
+use crate::pages::home::Home;
+use crate::pages::not_found::NotFound;
 
 /// An app router which renders the homepage and handles 404's
 #[component]

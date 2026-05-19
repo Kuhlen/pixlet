@@ -3,7 +3,7 @@ use leptos::task::spawn_local;
 use wasm_bindgen::JsCast;
 use web_sys::HtmlInputElement;
 
-use crate::conversion::{decode, encode, file_io, formats::OutputFormat};
+use crate::utils::{decode, encode, file_io, formats::OutputFormat};
 
 /// Main converter card with drop zone, format selector, quality slider, and convert button
 #[component]

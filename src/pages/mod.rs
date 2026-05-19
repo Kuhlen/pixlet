@@ -1,4 +1,4 @@
-pub mod about_page;
-pub mod features_page;
-pub mod home_page;
-pub mod not_found_page;
+pub mod about;
+pub mod features;
+pub mod home;
+pub mod not_found;
