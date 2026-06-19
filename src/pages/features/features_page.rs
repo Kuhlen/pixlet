@@ -64,7 +64,7 @@ pub fn Features() -> impl IntoView {
                         </div>
                         <h3 class="text-xl font-bold text-zinc-100 mb-3">"100% Private"</h3>
                         <p class="text-zinc-400 leading-relaxed">
-                            "Your files never leave your device. All image processing happens locally in your browser — no data is ever uploaded to any server."
+                            "Your files never leave your device. All image processing happens locally in your browser - no data is ever uploaded to any server."
                         </p>
                     </div>
 
@@ -133,7 +133,7 @@ pub fn Features() -> impl IntoView {
                         </div>
                         <h3 class="text-xl font-bold text-zinc-100 mb-3">"No Upload Required"</h3>
                         <p class="text-zinc-400 leading-relaxed">
-                            "Unlike traditional converters, your files stay on your machine. Drag, drop, convert, download — all without a single network request."
+                            "Unlike traditional converters, your files stay on your machine. Drag, drop, convert, download - all without a single network request."
                         </p>
                     </div>
 

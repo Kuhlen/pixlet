@@ -52,7 +52,7 @@ pub fn About() -> impl IntoView {
                     <h3 class="text-2xl font-bold text-zinc-100 mb-4">"The Story"</h3>
                     <div class="space-y-4 text-zinc-400 leading-relaxed">
                         <p>
-                            "Pixlet was born out of a simple desire: to learn WebAssembly by actually building something with it. Not a hello-world, not a counter app — but something that does real work in the browser."
+                            "Pixlet was born out of a simple desire: to learn WebAssembly by actually building something with it. Not a hello-world, not a counter app - but something that does real work in the browser."
                         </p>
                         <p>
                             "The idea was straightforward: take Rust's excellent "
@@ -62,7 +62,7 @@ pub fn About() -> impl IntoView {
                             ", and see if we can convert images entirely client-side without ever talking to a server."
                         </p>
                         <p>
-                            "Turns out, you can. And it's surprisingly fast. The whole app is a static site — no backend, no API, no database. Just HTML, CSS, and a chunk of WebAssembly doing the heavy lifting."
+                            "Turns out, you can. And it's surprisingly fast. The whole app is a static site - no backend, no API, no database. Just HTML, CSS, and a chunk of WebAssembly doing the heavy lifting."
                         </p>
                         <p>
                             "Is it over-engineered for an image converter? Probably. Did we learn a ton about WASM, Leptos, and the Rust web ecosystem? Absolutely. And that was the whole point."
