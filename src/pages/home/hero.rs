@@ -1,8 +1,8 @@
 use leptos::prelude::*;
 
-/// Hero section with title and subtitle
+/// Headline above the converter.
 #[component]
-pub fn HeroComponent() -> impl IntoView {
+pub fn Hero() -> impl IntoView {
     view! {
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-5xl font-bold text-zinc-100 mb-4">
