@@ -1,0 +1,13 @@
+{
+  "name": "pixlet-e2e",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test --timeout 60000",
+    "install-browser": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.1",
+    "playwright": "1.56.1"
+  }
+}

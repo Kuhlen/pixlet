@@ -1,0 +1,9 @@
+node_modules
+
+# Output
+/target
+/dist
+
+# OS
+.DS_Store
+Thumbs.db

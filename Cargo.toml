@@ -1,0 +1,34 @@
+[package]
+name = "pixlet"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+leptos = { version = "0.8", features = ["csr"] }
+leptos_meta = { version = "0.8" }
+leptos_router = { version = "0.8" }
+thiserror = "2"
+console_error_panic_hook = "0.1"
+
+# core: image conversion. pure rust, compiled into wasm
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp", "gif", "bmp", "tiff"] }
+
+# api: browser File API
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = [
+    "File", "FileList",
+    "Blob", "BlobPropertyBag",
+    "Url",
+    "HtmlInputElement", "HtmlAnchorElement",
+    "DragEvent", "DataTransfer",
+    "Document", "Window", "Element",
+] }
+gloo-timers = { version = "0.3", features = ["futures"] }
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = "abort"
